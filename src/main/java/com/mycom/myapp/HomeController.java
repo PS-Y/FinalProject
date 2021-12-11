@@ -1,4 +1,4 @@
-package com.mycom.home;
+package com.mycom.myapp;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 
-/*hello my name is anyeon*/
 @Controller
 public class HomeController {
 	
