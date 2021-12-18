@@ -17,7 +17,7 @@ public class MemberRowMapper implements RowMapper<MemberVO> {
 		vo.setGender(rs.getString("gender"));
 		vo.setBirth(rs.getString("birth"));
 		vo.setMajor(rs.getString("major"));
-		vo.setEmail(rs.getString("email"));
+		vo.setResidence(rs.getString("residence"));
 		return vo;
 	}
 

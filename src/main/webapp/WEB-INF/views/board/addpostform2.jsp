@@ -19,7 +19,7 @@
 
 	<div class="container">
 		<h1>팀원 추가</h1>
-		<form action="addok" method="post" class="was-validated">
+		<form action="addok2" method="post" class="was-validated">
 			<div class="form-group">
 				<label for="name">이름:</label> <input type="text"
 					class="form-control" id="name" placeholder="ex)박순용" name="name"
@@ -43,7 +43,7 @@
 			</div>
 			<div class="form-group form-check">
 				<label class="form-check-label"> <input
-					class="form-check-input" type="checkbox" name="residue" required>
+					class="form-check-input" type="checkbox" name="residence" required>
 					기숙사 거주
 					<div class="valid-feedback">Valid.</div>
 					<div class="invalid-feedback">Check this checkbox to
@@ -57,6 +57,15 @@
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback">Please fill out this field.</div>
 			</div>
+			
+			<div class="form-group">
+				<label for="name">전공:</label> <input type="text"
+					class="form-control" id="major" placeholder="ex)전산전자공학부" name="major"
+					required>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Please fill out this field.</div>
+			</div>
+			
 			<button type="submit" class="btn btn-primary">등록하기</button>
 		</form>
 	</div>

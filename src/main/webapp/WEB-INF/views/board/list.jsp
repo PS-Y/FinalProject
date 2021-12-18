@@ -44,7 +44,6 @@ html {
 </head>
 <body>
 <h1>공지사항</h1>
-
 <table id="list" width="90%">
 <tr>
 	<th>Id</th>
@@ -70,5 +69,6 @@ html {
 </c:forEach>
 </table>
 <br/><button type="button" onclick="location.href='add'">새글쓰기</button>
+<button type="button" onclick="location.href='list2'">팀원 명단</button>
 </body>
 </html>

@@ -9,7 +9,16 @@ public class MemberVO {
 	private String gender;
 	private String birth;
 	private String major;
-	private String email;
+	private String residence;
+	
+	public String getResidence() {
+		return residence;
+	}
+
+	public void setResidence(String residence) {
+		this.residence = residence;
+	}
+
 	private int cnt;
 
 	public int getSeq() {
@@ -58,14 +67,6 @@ public class MemberVO {
 
 	public void setMajor(String major) {
 		this.major = major;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public int getCnt() {

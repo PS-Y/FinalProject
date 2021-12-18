@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.mycom.myapp.board.BoardDAO"%>
-<%@page import="com.mycom.myapp.board.BoardVO"%>
+<%@page import="com.mycom.myapp.member.MemberDAO"%>
+<%@page import="com.mycom.myapp.member.MemberVO"%>
 <%@page import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -57,32 +57,33 @@ html {
 </head>
 <body>
 	<h1>팀 구성원</h1>
-
-	<table id="list2" width="90%">
-		<tr>
-			<th>Id</th>
-			<th>StudentNumber</th>
-			<th>Name</th>
-			<th>Gender</th>
-			<th>Birth</th>
-			<th>major</th>
-			<th>Edit</th>
-			<th>Delete</th>
-		</tr>
-		<c:forEach items="${list}" var="u">
-			<tr>
-				<td>${u.seq}</td>
-				<td>${u.snumber}</td>
-				<td>${u.name}</td>
-				<td>${u.gender}</td>
-				<td>${u.birth}</td>
-				<td>${u.major}</td>
-				<td><a href="editpost/${u.seq}">정보수정</a></td>
-				<td><a href="javascript:delete_ok('${u.seq}')">정보삭제</a></td>
-			</tr>
-		</c:forEach>
-	</table>
+   <table id="list2" width="80%">
+      <tr>
+         <th>Id</th>
+         <th>학번</th>
+         <th>이름</th>
+         <th>전공</th>
+         <th>생년월일</th>
+         <th>성별</th>
+         <th>거주지</th>
+         <th>Edit</th>
+         <th>Delete</th>
+      </tr>
+      <c:forEach items="${list}" var="u">
+         <tr>
+            <td>${u.seq}</td>
+            <td>${u.snumber}</td>
+            <td>${u.name}</td>
+            <td>${u.major}</td>
+            <td>${u.birth}</td>
+            <td>${u.gender}</td>
+            <td>${u.residence}</td>
+            <td><a href="editpost/${u.seq}">정보수정</a></td>
+            <td><a href="javascript:delete_ok2('${u.seq}')">정보삭제</a></td>
+         </tr>
+      </c:forEach>
+   </table>
 	<br />
-	<button type="button" onclick="location.href='add'">구성원 등록하기</button>
+	<button type="button" onclick="location.href='add2'">구성원 등록하기</button>
 </body>
 </html>
