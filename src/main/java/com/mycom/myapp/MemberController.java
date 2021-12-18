@@ -8,62 +8,62 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mycom.myapp.board.BoardService;
-import com.mycom.myapp.board.BoardVO;
+import com.mycom.myapp.member.MemberService;
+import com.mycom.myapp.member.MemberVO;
 
 @Controller
 @RequestMapping(value="/board")
-public class BoardController {
+public class MemberController {
 	
 	@Autowired
-	BoardService boardService;
+	MemberService memberService;
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String boardlist (Model model) {
-		model.addAttribute("list", boardService.getBoardList());
-		return "board/list";
+	public String memberlist (Model model) {
+		model.addAttribute("list", memberService.getMemberList());
+		return "board/list2";
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String addPost () {
-		return "board/addpostform";
+		return "board/addpostform2";
 	}
 	
 	@RequestMapping(value = "/addok", method = RequestMethod.POST)
-	public String addPostOK (BoardVO vo) {
-		int i= boardService.insertBoard(vo);
+	public String addPostOK (MemberVO vo) {
+		int i= memberService.insertMember(vo);
 		if(i==0)
-			System.out.println("데이터 추가 실패 ");
+			System.out.println("팀원 추가 실패 ");
 		else
-			System.out.println("데이터 추가 성공!!!");
+			System.out.println("팀원 추가 성공");
 		return "redirect:list";
 	}
 	
 	@RequestMapping(value = "/editpost/{id}", method = RequestMethod.GET)
 	public String editPost (@PathVariable("id") int id, Model model) {
-		BoardVO boardVO = boardService.getBoard(id);
-		model.addAttribute("boardVO", boardVO);
+		MemberVO memberVO = memberService.getMember(id);
+		model.addAttribute("memberVO", memberVO);
 		return "board/editform";
 	}
 	
 	@RequestMapping(value = "/editok", method = RequestMethod.POST)
-	public String editPostOK (BoardVO vo) {
-		int i= boardService.updateBoard(vo);
+	public String editPostOK (MemberVO vo) {
+		int i= memberService.updateMember(vo);
 		if(i==0)
-			System.out.println("데이터 수정 실패 ");
+			System.out.println("팀원정보 수정실패");
 		else
-			System.out.println("데이터 수정 성공!!!");
+			System.out.println("팀원정보 수정성공");
 		return "redirect:list";
 	}
 	
 	@RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
 	public String deletePostOK (@PathVariable("id") int id) {
-		int i= boardService.deleteBoard(id);
+		int i= memberService.deleteMember(id);
 		if(i==0)
-			System.out.println("데이터 삭제 실패 ");
+			System.out.println("팀원정보 삭제실패");
 		else
 			
-			System.out.println("데이터 삭제 성공!!!");
+			System.out.println("팀원정보 삭제성공");
 		return "redirect:../list";
 	}
 }

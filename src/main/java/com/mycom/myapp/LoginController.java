@@ -29,12 +29,12 @@ public class LoginController {
 			session.removeAttribute("login");
 		}
 		UserVO loginvo = service.getUser(vo);
-		if (loginvo != null) { // 로그인 성공
-			System.out.println("로그인 성공!");
+		if (loginvo != null) { // 濡쒓렇�씤 �꽦怨�
+			System.out.println("로그인성공!");
 			session.setAttribute("login", loginvo);
 			returnURL = "redirect:/board/list";
-		} else { // 로그인 실패
-			System.out.println("로그인 실패!");
+		} else { // 濡쒓렇�씤 �떎�뙣
+			System.out.println("로그인실패!");
 			returnURL = "redirect:/login/login";
 		}
 		return returnURL;
