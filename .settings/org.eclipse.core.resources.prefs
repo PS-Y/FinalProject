@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/mycom/myapp/BoardController.java=UTF-8
+encoding//src/main/java/com/mycom/myapp/LoginController.java=UTF-8
+encoding//src/main/java/com/mycom/myapp/MemberController.java=UTF-8
 encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8

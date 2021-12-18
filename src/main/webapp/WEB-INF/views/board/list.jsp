@@ -8,12 +8,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>free board</title>
+<title>공지사항</title>
 <style>
-#list {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 410;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('https//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+
+html {
+ font-family: 'LotteMartDream', sans-serif;
 }
 #list td, #list th {
   border: 1px solid #ddd;
@@ -38,7 +43,7 @@
 </script>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>공지사항</h1>
 
 <table id="list" width="90%">
 <tr>
