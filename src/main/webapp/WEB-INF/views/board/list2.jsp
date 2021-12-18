@@ -48,10 +48,10 @@ html {
 }
 </style>
 <script>
-	function delete_ok(id) {
+	function delete_ok2(id) {
 		var a = confirm("정말로 삭제하겠습니까?");
 		if (a)
-			location.href = 'deleteok/' + id;
+			location.href = 'deleteok2/' + id;
 	}
 </script>
 </head>
@@ -78,12 +78,13 @@ html {
             <td>${u.birth}</td>
             <td>${u.gender}</td>
             <td>${u.residence}</td>
-            <td><a href="editpost/${u.seq}">정보수정</a></td>
+            <td><a href="editpost2/${u.seq}">정보수정</a></td>
             <td><a href="javascript:delete_ok2('${u.seq}')">정보삭제</a></td>
          </tr>
       </c:forEach>
    </table>
 	<br />
 	<button type="button" onclick="location.href='add2'">구성원 등록하기</button>
+	<button type="button" onclick="location.href='list'">팀원 명단</button>
 </body>
 </html>

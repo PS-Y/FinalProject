@@ -7,9 +7,9 @@
 	(#{snumber} , #{name} , #{major} , #{birth}, #{gender}, #{residence})
 	</insert>
 	<update id="updateMember">
-		update BOARD
-		set #{snumber} , #{name} , #{major} , #{birth}, #{gender}, #{residence}
-		where seq=#{seq}
+		update personal
+      set snumber=#{snumber}, name=#{name}, major=#{major}, birth=#{birth}, gender=#{gender}, residence=#{residence}
+      where seq=#{seq}
 	</update>
 	<delete id="deleteMember">
 		delete from personal where seq=#{seq}

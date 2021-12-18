@@ -43,11 +43,11 @@
 			</div>
 			<div class="form-group form-check">
 				<label class="form-check-label"> <input
-					class="form-check-input" type="checkbox" name="residence" required>
+					class="form-check-input" type="checkbox" name="residence" value="기숙사">
 					기숙사 거주
-					<div class="valid-feedback">Valid.</div>
-					<div class="invalid-feedback">Check this checkbox to
-						continue.</div>
+					<br><input
+					class="form-check-input" type="checkbox" name="residence" value="외부거주">
+					외부 거주
 				</label>
 			</div>
 			<div class="form-group">
